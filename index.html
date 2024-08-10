@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bri Perdoname</title>
+</head>
+<body>
+    <h1>¿Me perdonas?</h1>
+    <div class="button-container">
+        <button class="button" id="si-button" onclick="respuesta('si')">Sí</button>
+        <button class="button" id="no-button" onclick="respuesta('no')">No</button>
+    </div>
+
+    <script>
+        function respuesta(respuesta) {
+            if (respuesta === 'si') {
+                alert('Es hora del segundo testamento que te hago, Creo que algo que he aprendido es que la vida no son las cosas que hacemos, si no las personas que conocemos en el camino, y tu eres esa gran persona, una vez te dije de que vos llegaste con mi glou up, y es verdad, llegaste a mejorar mi vida y no sabes cuanto te agradezco, de verdad nunca mi intención seria dañarte de alguna forma y que te sientas mal, de verdad quiero de que mis hijos te puedan decir tia, o mamá qn sabe, pero yo también quiero ser un buen mejor amigo para ti y poder aportar algo bueno a tu vida y que no solo la cague, perdón otra ve,  te amo loque');
+            } else {
+                alert('Daleee, perdoname');
+            }
+        }
+        setInterval(moverBotonNoAleatoriamente, 500);
+
+        function moverBotonNoAleatoriamente() {
+            var botonNo = document.getElementById('no-button');
+            var maxX = window.innerWidth - botonNo.offsetWidth;
+            var maxY = window.innerHeight - botonNo.offsetHeight;
+
+            var randomX = Math.floor(Math.random() * maxX);
+            var randomY = Math.floor(Math.random() * maxY);
+
+            botonNo.style.position = 'absolute';
+            botonNo.style.left = randomX + 'px';
+            botonNo.style.top = randomY + 'px';
+        }
+    </script>
+</body>
+</html>
